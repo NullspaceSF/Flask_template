@@ -5,6 +5,16 @@ $(document).ready(function(){
   $('#inference').click(async function(){
 
       console.log('Button was clicked')
+
+      const cylinders = parseFloat($('#cylinders').val());
+      const horsepower = parseFloat($('#horsepower').val());
+      const weight = parseFloat($('#weight').val());
+      const data = {
+          cylinders,
+          horsepower,
+          weight
+      }
+      console.log(data)
   })
 })
 

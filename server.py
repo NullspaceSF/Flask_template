@@ -1,11 +1,18 @@
 # import the nessecary pieces from Flask
 from flask import Flask,render_template, request,jsonify,Response
+
+
 #Create the app object that will route our calls
 app = Flask(__name__)
+
 # Add a single endpoint that we can use for testing
 @app.route('/', methods = ['GET'])
 def home():
     return render_template('home.html')
+
+@app.route('/mpg', methods = ['GET'])
+def mpg():
+    return render_template('mpg.html')
 
 #When run from command line, start the server
 if __name__ == '__main__':
